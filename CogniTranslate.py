@@ -1,8 +1,8 @@
 from translate import Translator
 
 class CogniTranslateTool:
-    def __init__(self, input_filename, output_filename):
-        self.translator = Translator(to_lang="pl")
+    def __init__(self, input_filename, output_filename, language):
+        self.translator = Translator(to_lang=language)
         self.input_filename = input_filename
         self.output_filename = output_filename
 
@@ -34,8 +34,9 @@ class CogniTranslateTool:
 def main():
     input_filename = "input.txt"
     output_filename = "output.txt"
-    
-    cogniTranslateTool = CogniTranslateTool(input_filename, output_filename)
+
+    language = input("Enter the target language code (default is 'pl'): ") or "pl"
+    cogniTranslateTool = CogniTranslateTool(input_filename, output_filename, language)
     cogniTranslateTool.translate_and_save()
 
 if __name__ == "__main__":

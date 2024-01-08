@@ -16,7 +16,7 @@ This is a simple translation tool that translates English words from an input fi
 ## Requirements
 
 - Python 3.x
-- `translate` package (`pip install translate`)
+- `translate` package (`pip install translate`) or `pip3 install -r requirements.txt`
 
 ## Example
 **input.txt**
